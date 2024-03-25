@@ -1,0 +1,101 @@
+.about
+{
+
+    width: 100vw;
+    height: 90vh;
+
+}
+.mainSection
+{
+    color: black;
+    padding: 12px 15px;
+    margin-top: 20px;
+    margin-left: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skillsWrap
+{
+    padding: 12px 20px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillsWrap .skill
+{
+    padding: 5px 5px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: rgba(7, 7, 232, 0.873);
+    color: white;
+    text-align: center;
+}
+.identity
+{
+    color: rgb(0, 100, 250);
+    font-size: 24px;
+}
+.section
+{
+    margin-top: 20px;
+}
+
+.section>p
+{
+    padding: 6px 9px;
+    font-size: 20px;
+}
+
+.profiles
+{
+    padding: 12px 14px;
+    width: 350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    gap: 12px;
+    justify-content: center;
+}
+.profile
+{
+    padding: 6px 9px;
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: .2fr .8fr;
+    gap: 12px;
+    border: 2px solid black;
+    background-color: transparent;
+    transition: all  .25s ease-in-out ;
+    color: black;
+    
+}
+.profile:hover
+{
+    background-color: rgba(231, 225, 225, 0.513);
+    transition: all .1rgba(200, 192, 192, 0.968);
+    cursor: pointer;
+
+}
+.summ
+{
+    display: flex;
+    justify-content:space-around;
+}
+
+@media screen and (max-width: 748px) {
+    /* Styles to apply when the viewport width is less than 526 pixels */
+    .skillsWrap
+    {
+      padding:3px 5px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 7px;
+    }
+
+  }

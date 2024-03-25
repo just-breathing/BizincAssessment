@@ -1,0 +1,12 @@
+[
+    {"item": "Wake up early in the morning", "completed": true},
+    {"item": "Have a healthy breakfast", "completed": false},
+    {"item": "Head to the gym for a workout session", "completed": false},
+    {"item": "Warm up with cardio exercises", "completed": true},
+    {"item": "Engage in strength training exercises", "completed": false},
+    {"item": "Hydrate adequately by drinking water", "completed": false},
+    {"item": "Have a protein-rich post-workout meal", "completed": true},
+    {"item": "Rest and recover adequately", "completed": false},
+    {"item": "Stay consistent with workouts and diet", "completed": true}
+  ]
+  

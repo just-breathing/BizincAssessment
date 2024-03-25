@@ -1,0 +1,1001 @@
+{
+	"info": {
+		"_postman_id": "4bd39157-67b8-4036-86a7-5181316883ad",
+		"name": "Bizinc Assessment Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33813465"
+	},
+	"item": [
+		{
+			"name": "Task-6 Crud Operations",
+			"item": [
+				{
+					"name": "create new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"test54\",\n    \"email\":\"test54@gmail.com\",\n    \"age\":23\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5200/api/v1/users/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user"
+							]
+						},
+						"description": "creates a new user in users table in userinfo database"
+					},
+					"response": [
+						{
+							"name": "create new user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"test54\",\n    \"email\":\"test54@gmail.com\",\n    \"age\":23\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5200/api/v1/users/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "133"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"85-ljhkj+sbKJUnxB69wmZK757kQHM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:45:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": {\n        \"status\": \"User Created Successfully\",\n        \"insertedData\": {\n            \"id\": 11,\n            \"username\": \"test54\",\n            \"email\": \"test54@gmail.com\",\n            \"age\": \"23\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5200/api/v1/users/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user",
+								"1"
+							]
+						},
+						"description": "returns a particular user in users table using id in userinfo database"
+					},
+					"response": [
+						{
+							"name": "get user by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5200/api/v1/users/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-YKu+dKWiMfrqAAZZ9iDTKxCthQ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:45:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"username\": \"user1\",\n    \"email\": \"user1@example.com\",\n    \"age\": \"25\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update user by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"test123456789\",\n    \"email\":\"test123@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5200/api/v1/users/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user",
+								"1"
+							]
+						},
+						"description": "updates an user in users table using id in userinfo database"
+					},
+					"response": [
+						{
+							"name": "update user by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"test123456789\",\n    \"email\":\"test123@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5200/api/v1/users/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "74"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4a-OQwy0ClbXf8bkdye1s6DoPhNHmk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:47:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"username\": \"test123456789\",\n    \"email\": \"test123@gmail.com\",\n    \"age\": \"25\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5200/api/v1/users/user/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user",
+								"3"
+							]
+						},
+						"description": "deletes an user in users table using id in userinfo database"
+					},
+					"response": [
+						{
+							"name": "delete user by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5200/api/v1/users/user/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"user",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:47:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5200/api/v1/users/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"all"
+							]
+						},
+						"description": "returns all users in users table in userinfo database"
+					},
+					"response": [
+						{
+							"name": "get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5200/api/v1/users/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "683"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2ab-dpcV2jzxiXXlJiNP92cHHmRM17Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:47:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"username\": \"user2\",\n        \"email\": \"user2@example.com\",\n        \"age\": \"30\"\n    },\n    {\n        \"id\": 4,\n        \"username\": \"user4\",\n        \"email\": \"user4@example.com\",\n        \"age\": \"35\"\n    },\n    {\n        \"id\": 5,\n        \"username\": \"user5\",\n        \"email\": \"user5@example.com\",\n        \"age\": \"27\"\n    },\n    {\n        \"id\": 6,\n        \"username\": \"user6\",\n        \"email\": \"user6@example.com\",\n        \"age\": \"32\"\n    },\n    {\n        \"id\": 7,\n        \"username\": \"user7\",\n        \"email\": \"user7@example.com\",\n        \"age\": \"29\"\n    },\n    {\n        \"id\": 8,\n        \"username\": \"user8\",\n        \"email\": \"user8@example.com\",\n        \"age\": \"31\"\n    },\n    {\n        \"id\": 9,\n        \"username\": \"user9\",\n        \"email\": \"user9@example.com\",\n        \"age\": \"26\"\n    },\n    {\n        \"id\": 10,\n        \"username\": \"user10\",\n        \"email\": \"user10@example.com\",\n        \"age\": \"33\"\n    },\n    {\n        \"id\": 11,\n        \"username\": \"test54\",\n        \"email\": \"test54@gmail.com\",\n        \"age\": \"23\"\n    },\n    {\n        \"id\": 1,\n        \"username\": \"test123456789\",\n        \"email\": \"test123@gmail.com\",\n        \"age\": \"25\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "All CRUD operations on this folder are done on userinfo database"
+		},
+		{
+			"name": "Task-8 blog",
+			"item": [
+				{
+					"name": "create new user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{email}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"admin@1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5200/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"user"
+							]
+						},
+						"description": "creates a new user in Users table in Blogdb database"
+					},
+					"response": [
+						{
+							"name": "create new user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"admin@1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5200/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "144"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"90-D1CPvlkAZEg7uGTtdN4dqPdg3Qg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:47:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": 11,\n        \"email\": \"admin@gmail.com\",\n        \"password\": \"$2a$10$A13Rr/SU0AvcBOfUCA5yv.0BtMcLd3KCAmZ7xrKqRpCGw6iQJANnm\",\n        \"full_name\": null,\n        \"bio\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:5200/api/v1/blog/users/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"users",
+								"all"
+							]
+						},
+						"description": "returns all users information excluding the hashed password field in Users table in Blogdb database"
+					},
+					"response": [
+						{
+							"name": "get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:5200/api/v1/blog/users/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"users",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "800"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"320-Q6bn6M3RAbbImLmH/zEX2yRHEO8\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AaYDD-J2LmFDmeWTulzXAs43dXRbL8AiF.FzQrrP9oaxBcA2ztvUTpHSuOK%2FxaYLkz5FLB%2FoFvUDo; Path=/; Expires=Sun, 24 Mar 2024 22:47:53 GMT; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:47:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"email\": \"user1@example.com\",\n        \"bio\": \"Bio for User 1\",\n        \"full_name\": \"User 1\"\n    },\n    {\n        \"email\": \"user2@example.com\",\n        \"bio\": \"Bio for User 2\",\n        \"full_name\": \"User 2\"\n    },\n    {\n        \"email\": \"user3@example.com\",\n        \"bio\": \"Bio for User 3\",\n        \"full_name\": \"User 3\"\n    },\n    {\n        \"email\": \"user4@example.com\",\n        \"bio\": \"Bio for User 4\",\n        \"full_name\": \"User 4\"\n    },\n    {\n        \"email\": \"user5@example.com\",\n        \"bio\": \"Bio for User 5\",\n        \"full_name\": \"User 5\"\n    },\n    {\n        \"email\": \"user6@example.com\",\n        \"bio\": \"Bio for User 6\",\n        \"full_name\": \"User 6\"\n    },\n    {\n        \"email\": \"user7@example.com\",\n        \"bio\": \"Bio for User 7\",\n        \"full_name\": \"User 7\"\n    },\n    {\n        \"email\": \"user8@example.com\",\n        \"bio\": \"Bio for User 8\",\n        \"full_name\": \"User 8\"\n    },\n    {\n        \"email\": \"user9@example.com\",\n        \"bio\": \"Bio for User 9\",\n        \"full_name\": \"User 9\"\n    },\n    {\n        \"email\": \"user10@example.com\",\n        \"bio\": \"Bio for User 10\",\n        \"full_name\": \"User 10\"\n    },\n    {\n        \"email\": \"admin@gmail.com\",\n        \"bio\": null,\n        \"full_name\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get all posts by user's full name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5200/api/v1/blog/comments-count/posts/user/User 1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"comments-count",
+								"posts",
+								"user",
+								"User 1"
+							]
+						},
+						"description": "returns all posts created by a user in Users table using user's full name in Blogdb database"
+					},
+					"response": [
+						{
+							"name": "get all posts by user's full name",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5200/api/v1/blog/comments-count/posts/user/User 1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"comments-count",
+										"posts",
+										"user",
+										"User 1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "347"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15b-bL77677HmAa75EP9qdotbYkir80\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3A7ANJAxfq5FB2W1o_lL8cl61ZXf85keDg.sdlsG%2BSO%2F7HzsSmFezGzdyJLkMoGXty5NS0XR4MD%2Bxo; Path=/; Expires=Sun, 24 Mar 2024 22:48:02 GMT; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:48:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"post_id\": 1,\n        \"title\": \"Title 1\",\n        \"content\": \"Content for post 1 by User 1\",\n        \"created_at\": \"2024-03-24T21:45:24.216Z\",\n        \"updated_at\": \"2024-03-24T21:45:24.216Z\",\n        \"comment_count\": \"3\"\n    },\n    {\n        \"post_id\": 4,\n        \"title\": \"Title 4\",\n        \"content\": \"Content for post 4 by User 1\",\n        \"created_at\": \"2024-03-24T21:45:24.216Z\",\n        \"updated_at\": \"2024-03-24T21:45:24.216Z\",\n        \"comment_count\": \"3\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "comments count on a post using title of the blog post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5200/api/v1/blog/comments-count/post-title/Title 2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"comments-count",
+								"post-title",
+								"Title 2"
+							]
+						},
+						"description": "returns no of comments and post information of a particular post using post's title from Post and comments tables in Blogdb database"
+					},
+					"response": [
+						{
+							"name": "comments count on a post using title of the blog post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5200/api/v1/blog/comments-count/post-title/Title 2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"comments-count",
+										"post-title",
+										"Title 2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "174"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ae-isXt5aum1hwWpscDG6gsLSsQy+8\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3A0ZPbzPJI3zyvhtosKkLxClVRmxIxWZQ2.Nu0xEjN2YxzjgUSUfA6R8UMP6xWzptiGcROSkJPGqmc; Path=/; Expires=Sun, 24 Mar 2024 22:50:10 GMT; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:50:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"post_id\": 2,\n        \"title\": \"Title 2\",\n        \"content\": \"Content for post 2 by User 2\",\n        \"created_at\": \"2024-03-24T21:45:24.216Z\",\n        \"updated_at\": \"2024-03-24T21:45:24.216Z\",\n        \"comment_count\": \"2\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get posts and comments count by user's fullname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5200/api/v1/blog//posts/all/User 1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5200",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"",
+								"posts",
+								"all",
+								"User 1"
+							]
+						},
+						"description": "returns no of comments and post information of a all posts made by a user using user's full name from Users, Post and comments tables in Blogdb database"
+					},
+					"response": [
+						{
+							"name": "get posts and comments count by user's fullname",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5200/api/v1/blog//posts/all/User 1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5200",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"",
+										"posts",
+										"all",
+										"User 1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "349"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15d-e9D9EKPoG2BrEwWSc6J2W16n7og\""
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "connect.sid=s%3AYcnVA1-i1wsRKQ96uflQtJLOh09ux22D.eyDKuWZPkZAZqoBaO0XplHAhBcZk3ZaiVcGkvbqzb10; Path=/; Expires=Sun, 24 Mar 2024 22:53:07 GMT; HttpOnly"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 24 Mar 2024 21:53:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"post_id\": 1,\n        \"full_name\": \"User 1\",\n        \"title\": \"Title 1\",\n        \"content\": \"Content for post 1 by User 1\",\n        \"created_at\": \"2024-03-24T21:45:24.216Z\",\n        \"updated_at\": \"2024-03-24T21:45:24.216Z\"\n    },\n    {\n        \"post_id\": 4,\n        \"full_name\": \"User 1\",\n        \"title\": \"Title 4\",\n        \"content\": \"Content for post 4 by User 1\",\n        \"created_at\": \"2024-03-24T21:45:24.216Z\",\n        \"updated_at\": \"2024-03-24T21:45:24.216Z\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "All CRUD API's in this folder are done on BlogDb Database",
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "{{password}}",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "{{email}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "password",
+			"value": "password1"
+		},
+		{
+			"key": "email",
+			"value": "user1@example.com"
+		}
+	]
+}

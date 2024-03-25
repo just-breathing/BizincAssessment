@@ -1,0 +1,139 @@
+.todoroute
+{
+  margin: auto;
+  margin-top: 5vh;
+  width: 50vw;
+  height: 60vh;
+  display: grid;
+  grid-template-rows: 30px 40px 300px;
+  gap: 20px;
+  justify-content: center;
+
+}
+
+.todoroute>label{
+  position: relative;
+  color: rgb(16, 15, 15);
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 5vw;
+  align-items: center;
+  text-align: center;
+
+}
+
+.addtodo
+{
+  margin:auto;
+  margin-top: 25px;
+  align-items: center;
+  display: grid ;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+.addtodo>input
+{
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  font-size: 20px;
+  padding: 7px 9px;
+  width:300px;
+}
+.addtodo>button
+{
+  padding:8px 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #1338be;
+  color: white;
+  margin-right: auto;
+}
+
+.TodoList
+{
+  margin-top: 50px;
+  width: max(75vw,370px);
+  height: max(500px,30vh);
+  padding: 12px 16px;
+  display: grid;
+  gap: 6px;
+  overflow-y:scroll;
+
+}
+.TodoList>.todoitem
+{
+
+  display: grid;
+  min-height: max(50px,max-content);
+  padding: 12px 14px;
+  grid-template-columns: .2fr 4fr;
+  gap: 12px;
+  border-bottom: 2px solid rgba(0, 0, 128, 0.464);
+  justify-content: center;
+  align-items: center;
+  animation: itemanim .5s ease-out;
+}
+.todoitem>p{
+  font-size: 18px;
+  color: black;
+}
+.todoitem>input
+{
+  margin: auto;
+  width: 17px;
+  height: 17px;
+}
+.todoitem:last-child 
+{
+  border-bottom: none;
+}
+.not-completed
+{
+  text-decoration:none;
+  text-decoration-color: black;
+  transition:  all .1s ease-in-out .15s;
+}
+.completed
+{
+  letter-spacing: 1.2px;
+  text-decoration: line-through;
+  text-decoration-color: black;
+
+  transition:  all .1s ease-out .15s;
+
+}
+@media screen and (max-width: 525px) {
+  /* Styles to apply when the viewport width is less than 526 pixels */
+  .addtodo
+  {
+    padding:6px 8px;
+    gap: 7px;
+  }
+  .addtodo>input
+  {
+    width: 200px;
+  }
+  .addtodo>button
+  {
+    margin-left: 0;
+  }
+}
+
+.TodoList::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.TodoList::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.799);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+@keyframes itemanim {
+  from {transform: translateX(-500px);}
+  to {transform: translateX(0px);}
+}
